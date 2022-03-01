@@ -4,3 +4,10 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+
+/* custom media query */
+@media (min-width: 992px) { 
+    .custom-width{
+        width: 60%;
+    }
+}
