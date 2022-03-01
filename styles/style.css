@@ -5,6 +5,10 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+.display-none{
+    display: none;
+}
+
 /* custom media query */
 @media (min-width: 992px) { 
     .custom-width{
