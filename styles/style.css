@@ -5,7 +5,7 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-.display-none{
+#spinner, #not-found, #show-all-button, #show-less-button{
     display: none;
 }
 
@@ -14,4 +14,14 @@ body{
     .custom-width{
         width: 60%;
     }
+    .details-width{
+        width: 75%;
+    }
+
+}
+@media (max-width: 576px) { 
+    .details-width{
+        width: 100%;
+    }
+
 }

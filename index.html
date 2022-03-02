@@ -24,38 +24,37 @@
             <div class="input-group mb-3  mx-auto custom-width">
                 <input type="text" id="search-field" class="form-control" placeholder="Enter phone name here"
                     aria-label="Phone name" aria-describedby="button-addon">
-                <button class="btn btn-outline-secondary" type="button" id="search-button">Search</button>
+                <button class="btn btn-outline-secondary" type="button" id="search-button" disabled>Search</button>
             </div>
         </section>
         <!-- loading -->
-        <section class="container my-5 display-none">
-            <p class="spinner-border d-block mx-auto" role="status"></p>
+        <section class="container my-5">
+            <p class="spinner-border mx-auto" id="spinner" role="status"></p>
         </section>
         <!-- error message -->
-        <section class="container display-none">
+        <section class="container">
             <div id="not-found">
                 <p class="fs-4 text-danger text-center">Item not found!</p>
             </div>
         </section>
         <!-- phone details  -->
-        <section class="container my-5">
-            <div class="card mx-auto w-75">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+        <section id="phone-details" class="container my-5">
         </section>
         <!-- phone section  -->
         <section class="container my-5">
             <div id="display-phone" class="row row-cols-1 row-cols-md-3 g-4">
             </div>
+            <div id="show-all-button">
+                <button class="btn btn-primary my-5 d-block mx-auto" id="show-all-button-clicked">Show All</button>
+            </div>
+            <div id="show-less-button">
+                <button class="btn btn-primary my-5 d-block mx-auto" id="show-less-button-clicked">Show
+                    Less</button>
+            </div>
         </section>
     </main>
 
+    <!-- javascript file -->
     <script src="js/app.js"></script>
 </body>
 
