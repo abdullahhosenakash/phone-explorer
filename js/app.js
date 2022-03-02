@@ -59,7 +59,8 @@ const displayPhone = data => {
             });
         }
         else {
-            clearItems
+            showLessButton.style.display = 'none';
+            showAllButton.style.display = 'none';
             newDisplayPhone(data.data);
         }
     }
@@ -177,7 +178,12 @@ searchField.addEventListener('keyup', event => {
         spinner.style.display = 'block';
         clearItems(parrentPhoneDetails);
         clearItems(searchedItems);
+        showLessButton.style.display = 'none';
+        showAllButton.style.display = 'none';
         getAPI(getInputValue(), true, false);
         notFound.style.display = 'none';
+        if (searchField.value === '') {
+            searchButton.setAttribute('disabled', true);
+        }
     }
 });
