@@ -39,23 +39,27 @@ const displayPhone = data => {
         spinner.style.display = 'none';
         searchButton.setAttribute('disabled', true);
         clearItems(searchedItems);
-        clearItems(showAllButton);
-        clearItems(showLessButton);
+        showLessButton.style.display = 'none';
+        showAllButton.style.display = 'none';
     }
     // display max 20 phone or all 
     else {
         const phoneQuantity = data.data;
         if (phoneQuantity.length > 20) {
             newDisplayPhone(phoneQuantity.slice(0, 20), true);
+            showAllButton.style.display = 'block';
             showAllButtonClicked.addEventListener('click', () => {
                 newDisplayPhone(phoneQuantity.slice(20, phoneQuantity.length - 1), false, true);
+                showLessButton.style.display = 'block';
             });
+
             showLessButtonClicked.addEventListener('click', () => {
                 clearItems(searchedItems);
                 newDisplayPhone(phoneQuantity.slice(0, 20), true);
             });
         }
         else {
+            clearItems
             newDisplayPhone(data.data);
         }
     }
@@ -153,6 +157,8 @@ searchButton.addEventListener('click', () => {
     spinner.style.display = 'block';
     clearItems(parrentPhoneDetails);
     clearItems(searchedItems);
+    showLessButton.style.display = 'none';
+    showAllButton.style.display = 'none';
     getAPI(getInputValue(), true, false);
     notFound.style.display = 'none';
     if (searchField.value === '') {
