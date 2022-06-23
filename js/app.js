@@ -174,7 +174,7 @@ searchField.addEventListener('keyup', event => {
         searchButton.setAttribute('disabled', true);
 
     }// using deprecated property to detect the keyboard's Enter button. Yet to learn updated system  -_-
-    if (event.keyCode == 13) {
+    if (event.keyCode === 13) {
         spinner.style.display = 'block';
         clearItems(parrentPhoneDetails);
         clearItems(searchedItems);
